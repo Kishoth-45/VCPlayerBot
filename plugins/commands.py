@@ -29,11 +29,8 @@ admin_filter=filters.create(is_admin)
 async def start(client, message):
     buttons = [
         [
-            InlineKeyboardButton('⚙️ Update Channel', url='https://t.me/subin_works'),
-            InlineKeyboardButton('🧩 Source', url='https://github.com/subinps/VCPlayerBot')
-        ],
-        [
-            InlineKeyboardButton('👨🏼‍🦯 Help', callback_data='help'),
+        InlineKeyboardButton('Tamil Chat🧩', url='https://t.me/Tamil_Chat_Empire'),
+        InlineKeyboardButton('Creator🎻', url='https://t.me/KhiladiKing45'),
         ]
     ]
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -44,10 +41,10 @@ async def start(client, message):
 @Client.on_message(filters.command(["help", f"help@{Config.BOT_USERNAME}"]))
 async def show_help(client, message):
     buttons = [
-        [
-            InlineKeyboardButton('⚙️ Update Channel', url='https://t.me/subin_works'),
-            InlineKeyboardButton('🧩 Source', url='https://github.com/subinps/VCPlayerBot'),
-        ]
+          [
+           InlineKeyboardButton('Tamil Chat🧩', url='https://t.me/Tamil_Chat_Empire'),
+           InlineKeyboardButton('Creator🎻', url='https://t.me/KhiladiKing45'),
+          ]
         ]
     reply_markup = InlineKeyboardMarkup(buttons)
     if Config.msg.get('help') is not None:
@@ -60,12 +57,11 @@ async def show_help(client, message):
 async def repo_(client, message):
     buttons = [
         [
-            InlineKeyboardButton('🧩 Repository', url='https://github.com/subinps/VCPlayerBot'),
-            InlineKeyboardButton('⚙️ Update Channel', url='https://t.me/subin_works'),
-            
-        ],
+        InlineKeyboardButton('Tamil Chat🧩', url='https://t.me/Tamil_Chat_Empire'),
+        InlineKeyboardButton('Creator🎻', url='https://t.me/KhiladiKing45'),
+      ],
     ]
-    await message.reply("<b>The source code of this bot is public and can be found at <a href=https://github.com/subinps/VCPlayerBot>VCPlayerBot.</a>\nYou can deploy your own bot and use in your group.\n\nFeel free to star☀️ the repo if you liked it 🙃.</b>", reply_markup=InlineKeyboardMarkup(buttons))
+    await message.reply("<b>The source code of this bot is public and can be found at <a href=https://github.com/Kishoth/VCPlayerBot>VCPlayerBot.</a>\nYou can deploy your own bot and use in your group.\n\nFeel free to star☀️ the repo if you liked it 🙃.</b>", reply_markup=InlineKeyboardMarkup(buttons))
 
 @Client.on_message(filters.command(['restart', 'update', f"restart@{Config.BOT_USERNAME}", f"update@{Config.BOT_USERNAME}"]) & admin_filter)
 async def update_handler(client, message):
